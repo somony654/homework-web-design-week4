@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive layout with flexbox</title>
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Mobile layout: below 600px */
+    header, footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+    .content {
+        background-color: #f2f2f2;
+        padding: 20px;
+        flex: 1;
+    }
+    .sidebar {
+        background-color: #ddd;
+        padding: 20px;
+        flex: 1;
+    }
+    /* Medium screens: 600px to 899px */
+    @media screen and (min-width: 600px) {
+        main {
+            flex-direction: row;
+        }
+
+        header, footer {
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        .content {
+            flex: 2;
+        }
+
+        .sidebar {
+            flex: 1;
+        }
+    }
+    /* Large screens: 900px and wider */
+    @media screen and (min-width: 900px) {
+        header, footer {
+            padding: 30px;
+            font-size: 22px;
+        }
+
+        .content {
+            flex: 3;
+        }
+
+        .sidebar {
+            flex: 1;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        Responsive Header
+    </header>
+
+    <main>
+        <section class="content">
+            Main Content
+        </section>
+
+        <aside class="sidebar">
+            Sidebar
+        </aside>
+    </main>
+
+    <footer>
+        Footer
+    </footer> 
+</body>
+</html>

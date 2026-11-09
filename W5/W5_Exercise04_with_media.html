@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4 media</title>
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .content {
+        background-color: green;
+        color: white;
+        padding: 15px;
+        font-size: 30px;
+    }
+    /* Default: Large screen */
+    .small {
+        display: none;
+    }
+    .big {
+        display: inline;
+    }
+    /* Small screen */
+    @media only screen and (max-width: 600px) {
+        .small {
+            display: inline;
+        }
+        .big {
+            display: none;
+        }
+        .content {
+            background-color: orangered;
+            font-size: 16px;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="content">
+            <span class="small">I'm SMALL 🥺</span>
+            <span class="big">I'm BIG 📸</span>
+        </div>
+    </div>
+
+</body>
+</html>
