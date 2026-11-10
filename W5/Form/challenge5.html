@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>5 </title> 
+    <style>
+        input:checked {
+            accent-color: green;
+        }
+        input:indeterminate {
+            outline: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="myCheck">
+    <label for="myCheck">Select me</label>
+
+    <script>
+        const checkbox = document.getElementById("myCheck");
+        checkbox.indeterminate = true;
+    </script>
+</body>
+</html>

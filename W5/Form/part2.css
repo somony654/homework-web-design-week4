@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf0f0;
+    margin: 0;
+    padding: 40px 15px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    border: 10px solid #5c8793;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #eeeeee;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.header h2 {
+    margin: 0;
+    color: #555555;
+    font-size: 24px;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 15px;
+    padding: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.form-group > label {
+    color: #249e87;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 13px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #249e87;
+    box-shadow: 0 0 4px rgba(36, 158, 135, 0.3);
+}
+
+/* Radio and checkbox */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+.options label {
+    font-size: 13px;
+    color: #555555;
+    white-space: nowrap;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #249e87;
+}
+
+/* Income range */
+.range-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.range-container input {
+    flex: 1;
+    accent-color: #249e87;
+}
+
+.range-container span {
+    background-color: #249e87;
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+input[type="file"] {
+    font-size: 12px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.footer {
+    background-color: #eeeeee;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #dddddd;
+}
+
+button {
+    background-color: #20b99a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #168f77;
+}
+
+@media (max-width: 500px) {
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+}
